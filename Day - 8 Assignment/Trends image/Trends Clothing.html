@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://127.0.0.1:5500/Day%20-%208%20Assignment/Trends.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trends Clothing</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .header {
+            padding-top: 1%;
+            width: 100%;
+            background-color:black;
+            height: 40%;
+            padding-bottom: 1%;
+
+
+
+        }
+
+        .headcol {
+            font-family: Helvetica, sans-serif;
+            color: aliceblue;
+            display: inline-block;
+            padding: 1%;
+            font-size: 30px;
+            
+        }
+
+        .filter{
+
+            margin-left: 5%;
+            display: inline-block;
+            height: 2%;
+            width: 30%;
+        }
+  
+         .filterbutton{
+            
+            width: 5%;
+            height: 10%;
+            margin-left: 5%;
+        }
+        .bagbg{
+            background-color: whitesmoke;
+            display: inline-block;
+             width: 50px;
+            height: 50px;
+            
+            color:white;
+            margin-left: 5%;
+            
+
+        }
+        .search{
+            width: 30%;
+            margin-left:5% ;
+            display: inline-block;
+            
+
+        }
+
+        .cart {
+        
+            margin-left: 0%;
+           color:white;
+           display: inline-block;
+            width: 10%;
+            height: 3%;
+        }
+
+       
+
+        
+        .quote {
+            font-family: Times, 'Times New Roman', serif;
+            margin-top: 40px;
+        }
+
+        input {
+            height: 25px;
+            width: 80px;
+            margin-left: 10px;
+            padding-left: 2px;
+            margin-top: 0;
+
+
+        }
+
+        .productscolumn {
+            height: auto;
+            padding-bottom: 20px;
+        }
+
+        .productlayout {
+            display: inline-block;
+            margin-top: 20px;          
+            height: auto;
+            width: 90%;
+            margin-left: 4%;
+            padding: 1%;
+
+        }
+        p {  
+            margin-left: 10px;
+            width: 80%;
+            height: 20%;
+            font-size: small;
+            padding-top: 5px;
+            font-family: Geneva, Verdana, sans-serif;
+            color: black;
+
+        }
+
+        .productcardbg {
+            background-color: white;
+           
+            border: 1px solid black;
+            
+            display: inline-block;
+        
+            height: 40%;
+            width: 28%;
+            margin-left: 3.5%;
+            margin-bottom: 10px;
+            padding-bottom: 1%;
+        }
+
+        .image {
+            height: 350px;
+          
+            overflow: hidden;
+
+        }
+       
+        .symbol       
+        {       
+           margin-left: 10px;
+            display: inline-block;
+            height:80%;
+            width: 40px;
+        }
+
+        .buttonbg{
+         background-color: black;
+            color: white;
+            font-family: sans-serif;
+            padding: 2px;
+
+        }
+        
+        .cartd{
+            width: 100%;
+           
+           background-color: white;
+            height: auto;
+            padding-bottom: 20px;
+        }
+      
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="symbol"><img class="symbol" src="./Trends Clothing_files/block-m-feed.jpg"></div>
+      
+        
+        <h1 class="headcol"> TRENDS </h1>
+    
+    
+        <div class="search">
+            <input type="text" style="width: 100%;" placeholder="Search Products" id="serstr" onkeyup="search()">
+            
+        </div>
+        <div class="filter">
+            <h5 style="color: white; font-family: sans-serif; padding: 3px;"> Apply Filter</h5>
+            <input type="text" required="" placeholder="Min price" id="minp">
+            <input type="text" required="" placeholder="Max price" id="maxp">
+            <img class="filterbutton" src="./Trends Clothing_files/OIP.NXkaEESzRuVMTZEj1GGvpwHaHa" onclick="filter()">
+   </div>
+        <div class="cart">
+            <div class="bagbg">
+                <img class="bagbg" src="./Trends Clothing_files/18182.png"></div>
+            <div class="bagbg">
+                <p style="color: black; padding-bottom: 10px; margin-left:0px">Cart</p>
+
+                <h7 style="color: black; margin-left: 5px; display: inline-block; " id="numb">0</h7>
+            </div>
+            
+        </div>
+       
+    </div>
+    <div class="productscolumn">
+        <div class="productlayout" id="card"> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/navy-blue-blazer.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Allen-Soley Blazer </h3>
+          <p>Size : M</p>
+          <p>Color : Blue</p>
+          <p>price : 8000</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Classic 2 piece Blazer</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(1)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/jcrew-navy-tall-pullover-hoodie-blue-product-2-869849077-normal.jpeg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Men's Hoodies</h3>
+          <p>Size : M</p>
+          <p>Color : Blue</p>
+          <p>price : 1500</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Hoodies From HRX</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(2)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/11521099039866-HRX-by-Hrithik-Roshan-Men-Orange-Printed-T-shirt-661521099039619-1.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">HRX T-Shirt</h3>
+          <p>Size : L</p>
+          <p>Color : Orange</p>
+          <p>price : 1000</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Sports Orange T-Shirt</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(3)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/Manyavar_Ranveer_singh_853x1280.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Traditional Kurta</h3>
+          <p>Size : L</p>
+          <p>Color : Black</p>
+          <p>price : 6000</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Traditional Wedding Black Kurta</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(4)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/main-qimg-61be96f00d4973aff98d72751e414c1a" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">PartyWear Suits</h3>
+          <p>Size : M</p>
+          <p>Color : Light-Blue</p>
+          <p>price : 2000</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Party Wear Light Blue Jacket</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(5)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/main-qimg-ce6ff1316bf1806ec513a221d3937280" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Office Party Suit</h3>
+          <p>Size : M</p>
+          <p>Color : Midnight-Blue</p>
+          <p>price : 2500</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Gentlemen Blue Blazzer</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(6)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/light-green-floral-print-ruffle-neck-chiffon-maxi-dress-018793.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Floral Frock</h3>
+          <p>Size : S</p>
+          <p>Color : Light-Green</p>
+          <p>price : 1500</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Good looking Floral Frock</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(7)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/Bridal Lehnga Choli  Indian Traditional Lehenga 2012-www.asianclothings.blogspot.com.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Traditional Lehenga</h3>
+          <p>Size : M</p>
+          <p>Color : Black</p>
+          <p>price : 10000</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Traditional Black Wedding Lehenga</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(8)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/dark_royal_blue_bacless_evening_dress_formal_gown_2_.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Evening Gown</h3>
+          <p>Size : L</p>
+          <p>Color : Blue</p>
+          <p>price : 3500</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Blue Evening Gown</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(9)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/Darshita-International-Red-Net-Saree-SDL817507162-1-e7641.jpeg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">Red Sarees</h3>
+          <p>Size : M</p>
+          <p>Color : Red</p>
+          <p>price : 2000</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Good Looking Red Saree</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(10)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/white-dress-LUX-LD2120-b.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">White Frock</h3>
+          <p>Size : S</p>
+          <p>Color : White</p>
+          <p>price : 2500</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Beautiful White Frock</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(11)">Add to Cart</button>
+          </p>
+        </div>
+        </div> <div class="productcardbg">
+          <div class="image">
+            <img src="./Trends Clothing_files/bb411c7416ee3123a0c8f14a67f62d0d.jpg" width="100%">
+          </div>
+          <div>
+          <h3 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px">White Kurta</h3>
+          <p>Size : M</p>
+          <p>Color : White</p>
+          <p>price : 1800</p>
+          <h5 style="font-family : Geneva, Verdana, sans-serif; padding-left : 10px ;padding-top : 10px">Simple White Long Kurta</h5>
+          <p style="padding-top: 5px">
+            <button class="buttonbg" onclick="addToCart(12)">Add to Cart</button>
+          </p>
+        </div>
+        </div></div>
+
+<div class="cartd">
+    
+    <h1 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif; margin-left: 600px;margin-top: 10PX; color: black;">
+        CART DETAILS 
+    </h1>
+
+    <div class="productlayout" id="cartcard">
+    </div>
+
+</div>
+              
+<script src="./Trends Clothing_files/Trends.js.download"> </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</div></body></html>
